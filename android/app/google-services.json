@@ -14,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "739678158127-9fg9kh1hio9roi360r064n8gmriamefc.apps.googleusercontent.com",
+          "client_id": "739678158127-oa204ns375reoofvgqkdj627dvq0q2t8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.semesterproject",
+            "certificate_hash": "893a7404597b4d2148b66587c6e2c914baa9f5b9"
+          }
+        },
+        {
+          "client_id": "739678158127-m0no4pheumfgf2h5s6mib2a6roglvrs9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -29,6 +37,49 @@
             {
               "client_id": "739678158127-9fg9kh1hio9roi360r064n8gmriamefc.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "739678158127-7re9lfo4qqqel6lu0fpruoosi54m47d1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.semesterproject"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739678158127:android:d822828c55cc1f1b8bb5da",
+        "android_client_info": {
+          "package_name": "com.example.semesterprojectadminpanel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739678158127-m0no4pheumfgf2h5s6mib2a6roglvrs9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrD8iTb3hmZVACPS0Ytpi7R9OpfB4Yns0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739678158127-9fg9kh1hio9roi360r064n8gmriamefc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "739678158127-7re9lfo4qqqel6lu0fpruoosi54m47d1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.semesterproject"
+              }
             }
           ]
         }

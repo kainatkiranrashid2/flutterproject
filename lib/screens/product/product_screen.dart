@@ -25,7 +25,7 @@ class ProductScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(title: product.name),
       bottomNavigationBar: BottomAppBar(
-          color: Colors.black,
+          color: Colors.blue,
           child: Container(
             height: 70,
             child: Row(
@@ -89,12 +89,12 @@ class ProductScreen extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   height: 60,
                   alignment: Alignment.bottomCenter,
-                  color: Colors.black.withAlpha(50)),
+                  color: Colors.blue.withAlpha(50)),
               Container(
                 margin: const EdgeInsets.all(5.0),
                 width: MediaQuery.of(context).size.width - 10,
                 height: 50,
-                color: Colors.black,
+                color: Colors.blue,
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: Row(

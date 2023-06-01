@@ -49,7 +49,10 @@ class CartProductCard extends StatelessWidget {
               return Row(
                 children: [
                   IconButton(
-                    icon: const Icon(Icons.remove_circle),
+                    icon: const Icon(
+                      Icons.remove_circle,
+                      color: Colors.blue,
+                    ),
                     onPressed: () {
                       context.read<CartBloc>().add(RemoveProduct(product));
                     },
@@ -59,8 +62,16 @@ class CartProductCard extends StatelessWidget {
                     style: Theme.of(context).textTheme.displayMedium,
                   ),
                   IconButton(
-                    icon: const Icon(Icons.add_circle),
+                    icon: const Icon(
+                      Icons.add_circle,
+                      color: Colors.blue,
+                    ),
                     onPressed: () {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text('Added to your Order!'),
+                        ),
+                      );
                       context.read<CartBloc>().add(AddProduct(product));
                     },
                   )

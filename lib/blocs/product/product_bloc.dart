@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
-import '../../models/models.dart';
+import '../../models/product_model.dart';
 import '/repositories/product/product_repository.dart';
 part 'product_event.dart';
 part 'product_state.dart';

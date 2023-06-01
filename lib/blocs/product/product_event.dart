@@ -13,8 +13,7 @@ class LoadProducts extends ProductEvent {}
 
 class UpdateProducts extends ProductEvent {
   final List<Product> products;
-
-  UpdateProducts(this.products);
+  const UpdateProducts(this.products);
 
   @override
   List<Object?> props() {

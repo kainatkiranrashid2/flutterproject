@@ -19,35 +19,40 @@ class WishlistScreen extends StatelessWidget {
     // ignore: prefer_const_constructors
     return Scaffold(
         appBar: const CustomAppBar(title: 'Wishlist'),
-        bottomNavigationBar: const CustomNavbar(),
+        bottomNavigationBar: const CustomNavbar(
+          screen: routeName,
+        ),
         body: BlocBuilder<WishlistBloc, WishlistState>(
           builder: (context, state) {
             if (state is WishlistLoading) {
               return const Center(
-                child: CircularProgressIndicator(),
+                child: CircularProgressIndicator(
+                  color: Colors.blue,
+                ),
               );
             }
             if (state is WishlistLoaded) {
-              return GridView.builder(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 8.0, vertical: 25.0),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 1, childAspectRatio: 2.1),
-                itemCount: state.wishlist.products.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return Center(
-                    child: ProductCard(
-                      product: state.wishlist.products[index],
-                      widthFactor: 1.2,
-                      leftPosition: 100,
-                      isWishlist: true,
-                    ),
-                  );
-                },
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: GridView.builder(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 8.0, vertical: 16.0),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 1,
+                    childAspectRatio: 2.25,
+                  ),
+                  itemCount: state.wishlist.products.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Center(
+                      child: ProductCard.wishlist(
+                        product: state.wishlist.products[index],
+                      ),
+                    );
+                  },
+                ),
               );
-            } else {
-              return const Text('Something went wrong');
             }
+            return const Text('Something went wrong!');
           },
         ));
   }
